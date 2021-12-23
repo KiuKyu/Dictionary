@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="inStr">
+        <input type="button" value="Dịch" onclick="Trans()">
+        <p id="outStr"></p>
+    </form>
+</body>
+<script>
+    function Trans() {
+        const enDB = ['cat', 'dog', 'snake', 'rabbit'];
+        const viDB = ['mèo', 'chó', 'rắn', 'thỏ'];
+        let inStr = document.getElementById('inStr').value;
+        let outStr = '';
+
+        for (let i = 0; i < enDB.length; i++) {
+            if (inStr == enDB[i]) {
+                outStr = viDB[i];
+            }
+        }
+        document.getElementById('outStr').innerHTML = outStr;
+    }
+</script>
+</html>
